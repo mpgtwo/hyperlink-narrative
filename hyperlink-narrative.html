@@ -1,17 +1,63 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+
         <style>
-            div{margin: 25px 50px 75px 100px;}
-            </style>
+        body {font-family: "Trirong", serif;}
+
+.container {
+    position:relative;
+    width: 60%;
+    margin:300px;
+}
+
+.image {
+  display: block;
+  width: 50%;
+  opacity: 1;
+  display: block;
+  width: auto;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #a889d4;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+        </style>
     </head>
     <body>
         <title>The Foolish Traveler</title>
-        <h1>Click Images to follow <i>The Foolish Traveler</i></h1>
-        <div style="margin: 20px 10px;"> 
-        <a href="page02.html">
-            <img src="image01.png" />
-           </a>
-        </div>
+ 
+        <div class="container">
+            <img src="https://github.com/mpgtwo/hyperlink-narrative/blob/main/Images/image01.png?raw=true" alt="image01" class="image" style="width:100%">
+            <div class="middle">
+              <div class="text">Click Images to follow <i>The Foolish Traveler</i></div>
+            </div>
+
     </body>
     </html>
